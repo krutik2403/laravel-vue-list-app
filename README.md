@@ -20,3 +20,8 @@ npm install or yarn install
 php artisan serve
 php artisan migrate --seed
 ```
+
+4. Compile frontend
+```
+npm run watch or yarn watch
+```
