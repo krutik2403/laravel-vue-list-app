@@ -1,0 +1,20 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap-vue/src/index";
+@import "~sweetalert2/dist/sweetalert2.min.css";
+
+.table-responsive {
+    max-height: 300px;
+}
+
+.my-app {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
