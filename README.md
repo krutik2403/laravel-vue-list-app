@@ -17,8 +17,10 @@ npm install or yarn install
 3. Run server, migrate and seed
 
 ```
-php artisan serve
 php artisan migrate --seed
+php artisan key:generate
+php artisan config:cache
+php artisan serve
 ```
 
 4. Compile frontend
