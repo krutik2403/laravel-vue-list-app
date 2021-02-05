@@ -14357,6 +14357,7 @@ input[type=color].form-control:disabled {
 
 .table-responsive {
   max-height: 300px;
+  overflow-x: scroll;
 }
 
 .my-app {

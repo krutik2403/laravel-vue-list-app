@@ -39,7 +39,7 @@ class UsersController extends Controller
     public function create(Request $request, User $user)
     {
         $validator = Validator::make($request->only(['name', 'email']), [
-            'name' => 'required|string',
+            'name' => 'required|string|max:50',
             'email' => 'required|email|unique:users'
         ]);
 

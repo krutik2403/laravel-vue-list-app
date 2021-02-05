@@ -17,15 +17,22 @@
                             item.id ? updateUser(item.id) : createUser()
                         "
                     >
+                    <div class="d-flex d-sm-flex justify-content-center align-items-start">
+
                         <b-form-group>
                             <b-form-input
                                 id="name"
                                 class="mb-2 mr-sm-2 mb-sm-0"
                                 placeholder="Name"
+                                max="50"
                                 v-model="item.name"
                                 :disabled="creating"
+                                :state="errors && errors.name ? false : null"
                                 required
                             ></b-form-input>
+                             <b-form-invalid-feedback>{{
+                                errors && errors.name && errors.name[0]
+                            }}</b-form-invalid-feedback>
                         </b-form-group>
                         <b-form-group>
                             <b-form-input
@@ -61,6 +68,7 @@
                         >
                             Clear
                         </b-button>
+                    </div>
                     </b-form>
                 </b-card-body>
             </b-card>
@@ -68,7 +76,6 @@
             <b-spinner v-if="loading" />
             <b-table
                 responsive
-                fixed
                 head-variant="light"
                 hover
                 bordered
@@ -79,6 +86,7 @@
                 <template #cell(actions)="data">
                     <b-button
                         variant="primary"
+                        class="ml-md-2"
                         @click="
                             setItem({
                                 id: data.item.id,
@@ -91,6 +99,7 @@
                     </b-button>
                     <b-button
                         variant="danger"
+                        class="ml-sm-2"
                         :disabled="deleting.id === data.item.id"
                         @click="showAlert(data.item.id)"
                     >

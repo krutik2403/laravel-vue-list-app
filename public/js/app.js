@@ -1987,6 +1987,15 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   el: "#app",
@@ -55331,120 +55340,148 @@ var render = function() {
                     },
                     [
                       _c(
-                        "b-form-group",
-                        [
-                          _c("b-form-input", {
-                            staticClass: "mb-2 mr-sm-2 mb-sm-0",
-                            attrs: {
-                              id: "name",
-                              placeholder: "Name",
-                              disabled: _vm.creating,
-                              required: ""
-                            },
-                            model: {
-                              value: _vm.item.name,
-                              callback: function($$v) {
-                                _vm.$set(_vm.item, "name", $$v)
-                              },
-                              expression: "item.name"
-                            }
-                          })
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "b-form-group",
-                        [
-                          _c("b-form-input", {
-                            staticClass: "mb-2 mr-sm-2 mb-sm-0",
-                            attrs: {
-                              id: "email",
-                              placeholder: "Email",
-                              type: "email",
-                              disabled: _vm.creating,
-                              state:
-                                _vm.errors && _vm.errors.email ? false : null,
-                              required: ""
-                            },
-                            model: {
-                              value: _vm.item.email,
-                              callback: function($$v) {
-                                _vm.$set(_vm.item, "email", $$v)
-                              },
-                              expression: "item.email"
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("b-form-invalid-feedback", [
-                            _vm._v(
-                              _vm._s(
-                                _vm.errors &&
-                                  _vm.errors.email &&
-                                  _vm.errors.email[0]
-                              )
-                            )
-                          ])
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "b-button",
+                        "div",
                         {
-                          attrs: {
-                            type: "submit",
-                            variant: "primary",
-                            disabled: _vm.creating
-                          }
+                          staticClass:
+                            "d-flex d-sm-flex justify-content-center align-items-start"
                         },
                         [
                           _c(
-                            "div",
-                            { staticClass: "d-flex align-items-center" },
+                            "b-form-group",
                             [
-                              _vm.creating
-                                ? _c("b-spinner", {
-                                    staticClass: "mr-2",
-                                    attrs: { small: "" }
-                                  })
-                                : _vm._e(),
-                              _vm._v(
-                                "\n                            " +
-                                  _vm._s(_vm.item.id ? "Update" : "Submit") +
-                                  "\n                        "
-                              )
+                              _c("b-form-input", {
+                                staticClass: "mb-2 mr-sm-2 mb-sm-0",
+                                attrs: {
+                                  id: "name",
+                                  placeholder: "Name",
+                                  max: "50",
+                                  disabled: _vm.creating,
+                                  state:
+                                    _vm.errors && _vm.errors.name
+                                      ? false
+                                      : null,
+                                  required: ""
+                                },
+                                model: {
+                                  value: _vm.item.name,
+                                  callback: function($$v) {
+                                    _vm.$set(_vm.item, "name", $$v)
+                                  },
+                                  expression: "item.name"
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c("b-form-invalid-feedback", [
+                                _vm._v(
+                                  _vm._s(
+                                    _vm.errors &&
+                                      _vm.errors.name &&
+                                      _vm.errors.name[0]
+                                  )
+                                )
+                              ])
                             ],
                             1
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _vm.item.id
-                        ? _c(
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "b-form-group",
+                            [
+                              _c("b-form-input", {
+                                staticClass: "mb-2 mr-sm-2 mb-sm-0",
+                                attrs: {
+                                  id: "email",
+                                  placeholder: "Email",
+                                  type: "email",
+                                  disabled: _vm.creating,
+                                  state:
+                                    _vm.errors && _vm.errors.email
+                                      ? false
+                                      : null,
+                                  required: ""
+                                },
+                                model: {
+                                  value: _vm.item.email,
+                                  callback: function($$v) {
+                                    _vm.$set(_vm.item, "email", $$v)
+                                  },
+                                  expression: "item.email"
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c("b-form-invalid-feedback", [
+                                _vm._v(
+                                  _vm._s(
+                                    _vm.errors &&
+                                      _vm.errors.email &&
+                                      _vm.errors.email[0]
+                                  )
+                                )
+                              ])
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
                             "b-button",
                             {
-                              staticClass: "ml-2",
-                              attrs: { type: "submit", variant: "danger" },
-                              on: {
-                                click: function($event) {
-                                  return _vm.setItem({
-                                    id: null,
-                                    name: "",
-                                    email: ""
-                                  })
-                                }
+                              attrs: {
+                                type: "submit",
+                                variant: "primary",
+                                disabled: _vm.creating
                               }
                             },
                             [
-                              _vm._v(
-                                "\n                        Clear\n                    "
+                              _c(
+                                "div",
+                                { staticClass: "d-flex align-items-center" },
+                                [
+                                  _vm.creating
+                                    ? _c("b-spinner", {
+                                        staticClass: "mr-2",
+                                        attrs: { small: "" }
+                                      })
+                                    : _vm._e(),
+                                  _vm._v(
+                                    "\n                            " +
+                                      _vm._s(
+                                        _vm.item.id ? "Update" : "Submit"
+                                      ) +
+                                      "\n                        "
+                                  )
+                                ],
+                                1
                               )
                             ]
-                          )
-                        : _vm._e()
-                    ],
-                    1
+                          ),
+                          _vm._v(" "),
+                          _vm.item.id
+                            ? _c(
+                                "b-button",
+                                {
+                                  staticClass: "ml-2",
+                                  attrs: { type: "submit", variant: "danger" },
+                                  on: {
+                                    click: function($event) {
+                                      return _vm.setItem({
+                                        id: null,
+                                        name: "",
+                                        email: ""
+                                      })
+                                    }
+                                  }
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                        Clear\n                    "
+                                  )
+                                ]
+                              )
+                            : _vm._e()
+                        ],
+                        1
+                      )
+                    ]
                   )
                 ],
                 1
@@ -55460,7 +55497,6 @@ var render = function() {
           _c("b-table", {
             attrs: {
               responsive: "",
-              fixed: "",
               "head-variant": "light",
               hover: "",
               bordered: "",
@@ -55476,6 +55512,7 @@ var render = function() {
                     _c(
                       "b-button",
                       {
+                        staticClass: "ml-md-2",
                         attrs: { variant: "primary" },
                         on: {
                           click: function($event) {
@@ -55493,6 +55530,7 @@ var render = function() {
                     _c(
                       "b-button",
                       {
+                        staticClass: "ml-sm-2",
                         attrs: {
                           variant: "danger",
                           disabled: _vm.deleting.id === data.item.id
